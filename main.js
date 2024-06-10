@@ -40,7 +40,7 @@ navLinks.forEach(link => {
     });
 });
 
-    navLink.forEach(n => n.addEventListener("click", linkAction))
+    navLinks.forEach(n => n.addEventListener("click", linkAction))
     // Scroll Section Active Link
 
     const Section=document.querySelectorAll('section[id]')
@@ -50,14 +50,14 @@ navLinks.forEach(link => {
         Section.forEach(current => {
             const sectionHeight = current.offsetHeight
             const sectionTop = current.offsetTop - 50;
-            sectionId = current.getAttribute('id')
+            Section = current.getAttribute('id')
             if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
             {
-                document.querySelector('.links a[href*=' + sectionId + ']').classList.add('active')
+                document.querySelector('.links a[href*=' + Section + ']').classList.add('active')
             }
             else
             {
-                document.querySelector('.links a[href*=' + sectionId + ']').classList.remove('active')
+                document.querySelector('.links a[href*=' + Section + ']').classList.remove('active')
             }
         })
 

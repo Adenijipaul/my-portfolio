@@ -157,6 +157,42 @@ img
     width: 7px;
 }
 /*===== Navbar =====*/
+/* Hide the menu by default */
+.menu {
+    display: none;
+}
+
+/* Display the menu when it is active */
+.menu.active {
+    display: block;
+}
+
+/* Styles for the menu button */
+.menu-btn {
+    cursor: pointer;
+}
+
+/* Style for the menu items */
+.nav-item {
+    list-style: none;
+}
+
+/* Style for the menu links */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Adjustments for different screen sizes */
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+    }
+    .menu-btn {
+        display: none;
+    }
+}
+
 .navbar
 {
     position: relative;
