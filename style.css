@@ -159,7 +159,7 @@ img
 /*===== Navbar =====*/
 .navbar
 {
-    position: fixed;
+    position: relative;
     z-index: 999;
     width: 100%;
     background-color: crimson;
@@ -275,6 +275,42 @@ img
 {
     width: 15%;
 }
+/* Base styles */
+.navbar {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff; /* Adjust as needed */
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+}
 .menu-btn
 {
     background-color: var(--main-color);
@@ -288,6 +324,7 @@ img
     color: var(--white);
     font-size: 17px;
     display: none;
+    cursor: pointer;
 }
 .navbar.sticky .menu-btn
 {
