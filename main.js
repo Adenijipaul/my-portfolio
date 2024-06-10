@@ -4,23 +4,42 @@ var navbar = document.querySelector(".navbar");
 window.onscroll = () =>{
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
-// NAv Toggler
+// Nav Toggler
+// const navMenu = document.querySelector(".menu");
+//       navToggle = document.querySelector(".menu-btn");
+//       if(navToggle)
+//       {
+//           navToggle.addEventListener("click", () =>
+//         {
+//             navMenu.classList.toggle("active");
+//         })
+//       }
+//     //   closing menu when link is clicked
+//     const navLink = document.querySelectorAll(".nav-link");
+//     function linkAction()
+//     {
+//         const navMenu = document.querySelector(".menu");
+//         navMenu.classList.remove("active")
+//     }
+    // Nav Toggler
 const navMenu = document.querySelector(".menu");
-      navToggle = document.querySelector(".menu-btn");
-      if(navToggle)
-      {
-          navToggle.addEventListener("click", () =>
-        {
-            navMenu.classList.toggle("active");
-        })
-      }
-    //   closing menu when link is clicked
-    const navLink = document.querySelectorAll(".nav-link");
-    function linkAction()
-    {
-        const navMenu = document.querySelector(".menu");
-        navMenu.classList.remove("active")
-    }
+const navToggle = document.querySelector(".menu-btn");
+
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+}
+
+// Closing menu when a link is clicked
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});
+
     navLink.forEach(n => n.addEventListener("click", linkAction))
     // Scroll Section Active Link
 
