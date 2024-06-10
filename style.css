@@ -657,7 +657,7 @@ img
 }
 .portfolio .portfolio-item-inner .portfolio-img img
 {
-    height: 100%;
+    height: 200%;
     width: 100%;
     display: block;
 }
